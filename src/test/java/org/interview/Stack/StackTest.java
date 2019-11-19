@@ -10,7 +10,7 @@ import org.junit.Test;
 public class StackTest {
 
 	@Test(expected = IllegalArgumentException.class)
-	public void shouldThrowIllegalStateWhenPushingNull() {
+	public void shouldThrowIllegalArgumentWhenPushingNull() {
 		// given
 		Stack mSUT = new StackImplementation();
 		// when
@@ -40,7 +40,6 @@ public class StackTest {
 
 		assertEquals(five, mSUT.max());
 		assertEquals(five, mSUT.pop());
-		assertNull(mSUT.max());
 	}
 
 	@Test(expected = EmptyStackException.class)
